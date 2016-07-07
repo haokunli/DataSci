@@ -1,2 +1,2 @@
 # Data Science Course
-This repository contais the material for the Data Science course
+This repository contains the material for the Data Science course
