@@ -8,4 +8,4 @@
 
 * Factors enter a regression equation as dummies. In R, there is no need of generating the dummies and to add them to the data set, R creates the dummies when running the regression and forgets them when the job is done.
 
-* In a regression equation, you can turn a numeric variable, such as the zip, into a factor, entering it as factor(varname). 
+* In a regression equation, you can turn a numeric variable, such as the zip, into a factor, entering it in the equation as factor(varname). 
