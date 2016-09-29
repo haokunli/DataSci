@@ -1,1 +1,1 @@
-This folder contains the files for the first team project, **Bike sharing demand**.
+This folder contains the files for the team project **Bike sharing demand**.
