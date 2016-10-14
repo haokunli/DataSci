@@ -1,1 +1,1 @@
-This folder contaains the files for the xsecond individual assignment.
+This folder contaains the files for the second individual assignment.
