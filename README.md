@@ -1,6 +1,6 @@
 ### Data Science Course
 
-[a [DATA-01] Data science with R](https://s3.eu-west-2.amazonaws.com/cinndata/data/data-01.html)
+[[DATA-01] Data science with R](https://s3.eu-west-2.amazonaws.com/cinndata/data/data-01.html)
 
 [DATA-02] Linear regression
 
