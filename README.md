@@ -1,6 +1,6 @@
  <h3>
  ```diff 
-+ Data Science Course
+Data Science Course
 ```
 </h3>
 
