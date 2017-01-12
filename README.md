@@ -11,3 +11,8 @@
 [[DATA-05] Text mining](https://s3.eu-west-2.amazonaws.com/cinndata/data/data-05.html)
 
 [[DATA-06] Sentiment analysis with Twitter data](https://s3.eu-west-2.amazonaws.com/cinndata/data/data-06.html)
+
+```diff
++ this will be highlighted in green
+- this will be highlighted in red
+```
