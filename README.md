@@ -1,6 +1,6 @@
-### Data Science Course
+<font color="blue">### Data Science Course</font>
 
-[<style="color:#FFFF00;">[DATA-01] Data science with R](https://s3.eu-west-2.amazonaws.com/cinndata/data/data-01.html)
+[[DATA-01] Data science with R](https://s3.eu-west-2.amazonaws.com/cinndata/data/data-01.html)
 
 [[DATA-02] Linear regression](https://s3.eu-west-2.amazonaws.com/cinndata/data/data-02.html)
 
@@ -11,5 +11,3 @@
 [[DATA-05] Text mining](https://s3.eu-west-2.amazonaws.com/cinndata/data/data-05.html)
 
 [[DATA-06] Sentiment analysis with Twitter data](https://s3.eu-west-2.amazonaws.com/cinndata/data/data-06.html)
-
-<p style='color:red'>This is some red text.</p>
