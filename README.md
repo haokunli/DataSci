@@ -1,6 +1,6 @@
-### ```diff 
-+ Data Science Course
-
+ ```diff 
++ <h3>Data Science Course</h3>
+```
 
 [[DATA-01] Data science with R](https://s3.eu-west-2.amazonaws.com/cinndata/data/data-01.html)
 
