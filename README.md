@@ -12,4 +12,4 @@
 
 [[DATA-06] Sentiment analysis with Twitter data](https://s3.eu-west-2.amazonaws.com/cinndata/data/data-06.html)
 
-<h1 style="color:#FFFF00;">This header is now yellow</h1>
+<p style='color:red'>This is some red text.</p>
