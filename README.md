@@ -1,4 +1,6 @@
-<h3 style="color:blue"> Data Science Course</h3>
+```diff 
++ ### Data Science Course
+
 
 [[DATA-01] Data science with R](https://s3.eu-west-2.amazonaws.com/cinndata/data/data-01.html)
 
