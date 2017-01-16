@@ -8,7 +8,7 @@ Apart from interesting real world applications of bike sharing systems, the char
 
 Bike-sharing rental process is highly correlated to the environmental and seasonal settings. For instance, weather conditions, precipitation, day of week, season, hour of the day, etc. can affect the rental behaviors. In a Kaggle competition, participants were asked to combine historical usage patterns with weather data in order to forecast bike rental demand in the Capital Bikeshare program in Washington, D.C.  
 
-### The data set
+#### The data set
 
 The data set is related to the two-year historical log corresponding to years 2011 and 2012, which is publicly available in `http://capitalbikeshare.com/system-data`. The weather information has been extracted from `http://www.freemeteo.com`.
 
