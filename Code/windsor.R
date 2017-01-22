@@ -13,9 +13,9 @@ tail(windsor)
 str(windsor)
 
 # Linear regression model #
-fm1 <- price ~ lotsize + nbdrm + nbhrm + nstor + ngar + drive + recrm +
+fm <- price ~ lotsize + nbdrm + nbhrm + nstor + ngar + drive + recrm +
   base + gas + air + neigh  
-mod1 <- lm(formula=fm1, data=windsor) 
+mod <- lm(formula=fm, data=windsor) 
 
 # Exploring the model #
 names(mod)
