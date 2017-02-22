@@ -14,13 +14,13 @@ twdf <- twListToDF(twlist)
 str(twdf)
 
 # Preliminaries 
-setwd("/Users/miguel/Dropbox/Current jobs/DATA-2016-2/DATA-06")
+setwd("/Users/miguel/Dropbox/Current jobs/DATA-2017-1/DATA-06")
 
 # Loading data
 load("Delta.RData")
 ls()
 str(twdf)
-twdf$text[1:10]
+twdf$text[1:5]
 
 # Preprocessing
 twdf$text <- gsub(twdf$text, pattern="[[:cntrl:]]", replacement=" ") 
@@ -32,16 +32,15 @@ twdf$text <- gsub(twdf$text, pattern="http://[/a-zA-Z0-9.]+", replacement=" ")
 twdf$text <- gsub(twdf$text, pattern="@([A-Za-z]+[A-Za-z0-9]+)", replacement=" ") 
 twdf$text <- gsub(twdf$text, pattern="[$#])", replacement=" ") 
 twdf$text <- gsub(twdf$text, pattern="([0-9]+[A-Za-z0-9]+)", replacement=" ") 
-twdf$text <- gsub(twdf$text, pattern="[[:punct:]]", replacement=" ") 
 twdf$text <- gsub(twdf$text, pattern="[^a-zA-Z ]", replacement=" ")
 twdf$text <- tolower(twdf$text)  
 twdf$text <- gsub(twdf$text, pattern=" +", replacement=" ") 
 twdf$text <- gsub(twdf$text, pattern="^ | $", replacement="") 
-twdf$text[1:10]
+twdf$text[1:5]
 
 # Liu's list of positive and negative words 
-pos.terms = scan("positive-words.txt", what="character", comment.char=";")
-neg.terms = scan("negative-words.txt", what="character", comment.char=";")
+pos.terms = readLines("positive-words.txt")
+neg.terms = readLines("negative-words.txt")
 
 # Add specific terms (I should have added "small" to negatives)
 pos.terms = c(pos.terms, "smiley", "upgrade")
@@ -49,22 +48,17 @@ neg.terms = c(neg.terms, "cancel", "cancelled", "fix", "weeping", "fucked", "mec
   "mistreat", "mistreated", "piss", "pissed", "shitty", "stranded", "wait", "waiting", "wtf")
 
 # Counting functions
-posCount <- function(x) sum(x %in% pos.terms)
-negCount <- function(x) sum(x %in% neg.terms)
-
-# Word splitting
-term.list = strsplit(twdf$text, " ")
+posCount <- function(x) sum(unlist(strsplit(x, split=" ")) %in% pos.terms)
+negCount <- function(x) sum(unlist(strsplit(x, split=" ")) %in% neg.terms)
 
 # Polarity (1)
-positive <- unlist(lapply(term.list, posCount))
-negative <- unlist(lapply(term.list, negCount))
+positive <- sapply(twdf$text, posCount, USE.NAMES=F)
+negative <- sapply(twdf$text, negCount, USE.NAMES=F)
 polarity <- positive - negative
 
 # Figure 1
-pdf("fig1.pdf", width=3.5, height=3.75, pointsize=7)
 plot(table(polarity), type="h", main="Figure 1. Distribution of polarity scores", 
   xlab="Polarity", ylab="Frequency")
-dev.off()
 
 # Ignore the middle #
 sum(polarity>=1)/sum(polarity<=-1)
@@ -85,3 +79,5 @@ mean(polarity[filter], na.rm=T)
 
 # Figure 2
 hist(polarity[filter], main='Figure 2. Distribution of polarity', xlab='Polarity')
+
+ 
