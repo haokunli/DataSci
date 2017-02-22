@@ -6,7 +6,7 @@ The objective of this assignment is to predict the winners of the Acadmy Awards 
 
 #### Submission
 
-Submit your predictions, with a one-page explanation on how you got them, togehter with the code used.   
+Submit your predictions, with a one-page explanation on how you got them, together with the code used.   
 
 #### Deadline
 
