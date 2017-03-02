@@ -45,7 +45,7 @@ moonlight <- f("Moonlight+Oscar")
 
 # Saving actresses data #
 setwd("/Users/miguel/Dropbox (Personal)/Current jobs/DATA-2017-1/Oscar 2017")
-save(arrival, fences, water, hidden, lalaland, lion, manchester, moonlight,
+save(arrival, fences, hacksaw, water, hidden, lalaland, lion, manchester, moonlight,
   file="picture.RData")
 
 # Counting tweets #
@@ -53,6 +53,8 @@ nrow(arrival)
 sum(arrival$isRetweet)
 nrow(fences)
 sum(fences$isRetweet)
+nrow(hacksaw)
+sum(hacksaw$isRetweet)
 nrow(water)
 sum(water$isRetweet)
 nrow(hidden)
