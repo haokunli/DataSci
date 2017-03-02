@@ -39,7 +39,8 @@ g <- function(movie) {
   positive <- sapply(movie$text, posCount, USE.NAMES=F)
   negative <- sapply(movie$text, negCount, USE.NAMES=F)
   polarity <- positive - negative
-  sum(polarity>=1)/sum(polarity<=-1)
+  polarity_ratio <- sum(polarity>=1)/sum(polarity<=-1)
+  return(polarity_ratio)
 }
 
 # Polarity evaluation #
