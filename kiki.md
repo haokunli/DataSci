@@ -347,7 +347,7 @@ Some people prefer a graphical version of such tables.
 
     barplot(tapply(turnover$left, turnover$salary, mean))
 
-![](kiki_files/figure-markdown_strict/unnamed-chunk-12-1.png)
+![](file:///Users/miguel/Dropbox%20(Personal)/DATA-2017-2/kiki_files/figure-markdown_strict/unnamed-chunk-12-1.png)
 
 More examples follow.
 
