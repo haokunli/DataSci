@@ -425,7 +425,7 @@ varioable.
       main="Figure 1. Histogram of the evaluation by the superior",
       xlab="Evaluation")
 
-![](kiki_files/figure-markdown_strict/unnamed-chunk-17-1.png)
+![](file:///Users/miguel/Dropbox%20(Personal)/DATA-2017-2/kiki_files/figure-markdown_strict/unnamed-chunk-17-1.png)
 
 Scatterplot are very simple in `R` and allow for a lot of customization.
 The syntax is `plot(y ~ x)`. If the two vectors are extracted from the
