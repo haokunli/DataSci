@@ -1,3 +1,10 @@
+---
+title: "Data science with R"
+author: "Miguel-Angel Canela, IESE Business School"
+date: "May 1, 2017"
+output: md_document
+kiki: YES
+---
 ### Data science and machine learning
 
 The expression **data scientist** is trending these days in job
@@ -347,7 +354,7 @@ Some people prefer a graphical version of such tables.
 
     barplot(tapply(turnover$left, turnover$salary, mean))
 
-![](file:///Users/miguel/Dropbox%20(Personal)/DATA-2017-2/kiki_files/figure-markdown_strict/unnamed-chunk-12-1.png)
+![](http://www.museomuraldiegorivera.bellasartes.gob.mx/images/Headerweb.png)
 
 More examples follow.
 
