@@ -1,8 +1,10 @@
 ## Data Science Course
 
-#### [:link:](https://s3.eu-west-2.amazonaws.com/cinndata/data/data-01.html) [DATA-01] Data science with R
+#### [:link:](https://s3.eu-west-2.amazonaws.com/cinndata/data/data-01.html) [DATA-01] Introduction to R
 
-#### [:link:](https://s3.eu-west-2.amazonaws.com/cinndata/data/data-02.html)[DATA-02] Linear regression
+#### [:link:](https://s3.eu-west-2.amazonaws.com/cinndata/data/data-01.html) [DATA-02] Data science with R
+
+#### [:link:](https://s3.eu-west-2.amazonaws.com/cinndata/data/data-02.html)[DATA-03] Linear regression
 
 #### [:link:](https://s3.eu-west-2.amazonaws.com/cinndata/data/data-03.html)[DATA-03] Logistic regression
 
