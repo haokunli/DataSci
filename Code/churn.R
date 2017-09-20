@@ -22,10 +22,10 @@ table(churn$dataplan, churn$datagb)
 # Predictive scores #
 score <- predict(mod, newdata=churn, type="response")
 
-# Setting the cutoff
+# Setting the cutoff #
 cut1 <- 0.5
 
-# Confusion matrix
+# Confusion matrix #
 conf1 <- table(score > cut1, churn$churn==1)
 conf1
 tp1 <- conf1["TRUE", "TRUE"]/sum(conf1[,"TRUE"])
