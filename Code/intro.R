@@ -1,4 +1,4 @@
-## [DATA-01] Data science with R ##
+## Introduction to R ##
 
 # Start #
 2 + 2
