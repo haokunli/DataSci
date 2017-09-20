@@ -48,24 +48,3 @@ tp2 <- conf2["TRUE", "TRUE"]/sum(conf2[,"TRUE"])
 tp2
 fp2 <- conf2["TRUE", "FALSE"]/sum(conf2[,"FALSE"])
 fp2
-
-
-# Benefit analysis
-B <- matrix(c(0, 0, -0.2, 0.8), nrow=2, byrow=TRUE)
-benefit1 <- sum(conf1*B); benefit1
-benefit2 <- sum(conf2*B); benefit2
-
-# Optimal cutoff
-f_benefit <- function(cutoff) {
-	conf <- table(pred1 > cutoff, churn$churn==1)
-	benefit <- sum(conf*B)
-	return(benefit)
-	}
-optimize(f=f_benefit, lower=0.05, upper=0.95, maximum=TRUE)
-
-# Benefit as a function of the cutoff
-cutoff <- seq(0.05, 0.95, by=0.01)
-benefit[1] <- f_benefit(cutoff[1]); for(i in 2:91) benefit <- c(benefit, f_benefit(cutoff[i]))
-plot(cutoff, benefit, type="l")
-
-
