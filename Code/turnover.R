@@ -6,8 +6,11 @@ url2 <- "/[DATA-02] Data science with R/"
 url <- paste(url1, url2, sep="")
 setwd(url)
 
-# Opening file #
+# Opening file (1) #
 turnover <- read.csv(file="turnover.csv")
+
+# Opening file (2) #
+turnover <- read.csv("https://raw.githubusercontent.com/cinnData/DATA/master/Data/turnover.csv")
 
 # Dimension #
 dim(turnover)
