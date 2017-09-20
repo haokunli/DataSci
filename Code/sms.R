@@ -1,4 +1,4 @@
-## [DATA-05] SMS in Singapore Mobile ##
+## SMS in Singapore Mobile ##
 
 # Setting the working directopry (customize) #
 setwd("/Users/miguel/Dropbox/Current jobs/DATA-2017-1/DATA-05")
