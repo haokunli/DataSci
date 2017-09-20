@@ -1,39 +1,37 @@
 ## The churn model ##
 
 # Setting work directory #
-import os
-os.chdir("/Users/miguel/Dropbox (IESE)/Data archive/DATA")
+setwd("/Users/miguel/Dropbox (IESE)/Data archive/DATA")
 
 # Reading data #
-import pandas as pd
-churn = pd.read_csv("churn.csv")
-churn.shape
-churn.columns.values
+churn <- read.csv("churn.csv")
+str(churn)
+N <- nrow(churn)
+
+# Formula #
+fm = churn ~ aclength + intplan + dataplan + ommin + omcall + otmin +
+  otcall + ngmin + ngcall + imin + icall + cuscall
 
 # Logistic regression #
-import statsmodels.api as sm
-import statsmodels.formula.api as smf
-fm = "churn ~ aclength + intplan + dataplan + datagb + ommin + omcall + \
-  otmin + otcall + ngmin + ngcall + imin + icall + cuscall"
-log_mod = smf.glm(formula=fm, data=churn, family=sm.families.Binomial()).fit()
-log_mod.summary()
-log_pred = log_mod.predict()
+mod <- glm(fm, data=churn, family="binomial") 
+summary(mod)
 
-# Plotting predictive scores #
-import matplotlib.pyplot as plt
-plt.hist(log_pred, 25, color=0.9)
-plt.title("Scores histogram")
-plt.xlabel("Score")
-plt.ylabel("Frequency")
-plt.show()
+# Inspecting datagb #
+table(churn$dataplan, churn$datagb)
+
+# Predictive scores #
+score <- predict(mod, newdata=churn, type="response")
 
 # Setting the cutoff
 cut1 <- 0.5
 
 # Confusion matrix
-conf1 <- table(pred1 > cut1, churn$churn==1); conf1
-tp1 <- conf1["TRUE", "TRUE"]/sum(conf1[,"TRUE"]); tp1
-fp1 <- conf1["TRUE", "FALSE"]/sum(conf1[,"FALSE"]); fp1
+conf1 <- table(score > cut1, churn$churn==1)
+conf1
+tp1 <- conf1["TRUE", "TRUE"]/sum(conf1[,"TRUE"])
+tp1
+fp1 <- conf1["TRUE", "FALSE"]/sum(conf1[,"FALSE"])
+fp1
 
 # Splitting the histogram
 par(mfrow=c(1,2))
@@ -44,9 +42,13 @@ hist(pred1[churn$churn==0], breaks=20, main="Figure 3b. Predictive scores (non-c
 
 # Lower cutoff
 cut2 <- mean(churn$churn)
-conf2 <- table(pred1 > cut2, churn$churn==1); conf2
-tp2 <- conf2["TRUE", "TRUE"]/sum(conf2[,"TRUE"]); tp2
-fp2 <- conf2["TRUE", "FALSE"]/sum(conf2[,"FALSE"]); fp2
+conf2 <- table(pred1 > cut2, churn$churn==1)
+conf2
+tp2 <- conf2["TRUE", "TRUE"]/sum(conf2[,"TRUE"])
+tp2
+fp2 <- conf2["TRUE", "FALSE"]/sum(conf2[,"FALSE"])
+fp2
+
 
 # Benefit analysis
 B <- matrix(c(0, 0, -0.2, 0.8), nrow=2, byrow=TRUE)
