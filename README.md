@@ -1,6 +1,6 @@
 ## Data Science Course
 
-#### [:link:](https://s3.eu-west-2.amazonaws.com/cinndata/data/Introduction_to_R.html) Introduction to R
+#### [:link:](https://s3.eu-west-2.amazonaws.com/cinndata/data/Introduction_to_R.html?versionId=null) Introduction to R
 
 #### [:link:](https://s3.eu-west-2.amazonaws.com/cinndata/data/Data_Science_with_R.html) Data science with R
 
