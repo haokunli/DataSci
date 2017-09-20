@@ -1,4 +1,4 @@
-## [DATA-05] Example: The spam filter ##
+## The spam filter ##
 
 # Setting work directory #
 setwd("/Users/miguel/Dropbox/DATA-2017-2/[DATA-05] Decision trees")
