@@ -1,4 +1,4 @@
-## [DATA-07] Sentiment analysis ##
+## Consumer attitude towards airlines ##
 
 # Twitter setup #
 library(twitteR)
