@@ -2,7 +2,7 @@
 
 #### Introduction
 
-This assignment is based on the homework of the lecture **Data science with R**. The file `TATASTEEL.NS.csv` contains daily OCHL (Open/Close/High/Low) data for ICICI Bank, from the National Stock Exchange in Mumbai, extracted from Yahoo Finance India. The dates go from 2003-01-01 to 2015-12-31.
+This assignment is based on the homework of the lecture **Data science with R**. The file `TATASTEEL.NS.csv` contains daily OCHL (Open/Close/High/Low) data for Tata Steel, from the National Stock Exchange in Mumbai, extracted from Yahoo Finance India. The dates go from 2003-01-01 to 2015-12-31.
 
 #### Tasks
 
