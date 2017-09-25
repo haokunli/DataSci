@@ -1,6 +1,6 @@
 ## House sales in King County ##
 
-# Setting work directory #
+# Setting work directory (customize) #
 setwd("/Users/miguel/Dropbox (IESE)/Data archive/DATA")
 
 # Reading data #
