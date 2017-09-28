@@ -3,7 +3,7 @@
 # Setting working directory #
 wd1 <- "C:/Users/mcanela/Dropbox (Personal)/DATA-2017-2"
 wd2 <- "/Buro/Assignment 1"
-wd <- paste(url1, url2, sep="")
+wd <- paste(wd1, wd2, sep="")
 setwd(wd)
 
 # Opening file (local) #
