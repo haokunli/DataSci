@@ -1,10 +1,11 @@
 ## House sales in King County ##
 
 # Setting work directory (customize) #
-setwd("/Users/miguel/Dropbox (IESE)/Data archive/DATA")
+setwd("/Users/miguel/Dropbox (Personal)/DATA-2017-2/[DATA-03] Linear Regression")
 
 # Reading data #
-king <- read.csv("king.csv", stringsAsFactors=F)
+king <- read.csv("king.csv")
+str(king)
 head(king)
 summary(king)
 
@@ -17,9 +18,16 @@ mod <- lm(formula=fm, data=king)
 summary(mod)
 names(mod)
 pred_price <- predict(mod, newdata=king)
+
+# Residual analysis #
 pred_error <- king$price - pred_price
-  plot(king$price ~ pred_price, pch=".", main="Figure 1", xlab="Predicted price",
-  ylab="Actual price")
+sd(pred_error)
+sd(king$price)
+sd(pred_error)/sd(king$price)
+
+# Prediction error in dollar terms #
+mean(abs(pred_error) > 200000)
+mean(abs(pred_error) > 150000)
 
 # Histograms #
 par(mfrow=c(1,2))
