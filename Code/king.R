@@ -36,7 +36,7 @@ hist(pred_error, main="Figure 1b. Prediction error", xlab="")
 
 # Scatterplots #
 par(mfrow=c(1,2))
-plot(king$price ~ pred_price, pch=20, main="Figure 2a. Actual vs predicted price",
+plot(king$price ~ pred_price, pch=".", main="Figure 2a. Actual vs predicted price",
  xlab="Predicted price", ylab="Actual price")
-plot(pred_error ~ pred_price, pch=20, main="Figure 2b. Prediction error vs predicted price",
+plot(pred_error ~ pred_price, pch=".", main="Figure 2b. Prediction error vs predicted price",
   xlab="Predicted price", ylab="Prediction error")
