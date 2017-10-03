@@ -6,7 +6,7 @@ This assignment is based on the homework of the lecture **Linear regression**. S
 
 #### Tasks
 
-1. Transformations, such the square root or the logarithm, are recommended in Statistics textbooks in many situations. In particular, the **log transformation** is recommended for variables with skewed distributions, to limit the influence of extreme values. Develop a model for predicting the price which is based on a linear regression equation that has the logarithm of the price on the left side. Do you get better predictions  with this model.
+1. Transformations, such the square root or the logarithm, are recommended in Statistics textbooks in many situations. In particular, the **log transformation** is recommended for variables with skewed distributions, to limit the influence of extreme values. Develop a model for predicting the price which is based on a linear regression equation that has the logarithm of the price on the left side. Do you get better predictions  with this model?
 
 2. It can be argued that having a model based on a linear equation does not make sense on such a wide range of prices. Indeed, in order to cope with the expensive houses, we are spoiling the prediction for some of the nonexpensive houses. So, we could trim the data set, dropping the houses that exceed a certain theshold of price and/or size. What do you suggest?
 
