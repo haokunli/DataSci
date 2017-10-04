@@ -1,8 +1,7 @@
 ## House sales in King County (continuation) ##
 
 # Reading data #
-king <- read.csv(url("https://raw.githubusercontent.com/cinnData/DATA/master/Data/king.csv",
-  method="wininet"))
+king <- read.csv("https://raw.githubusercontent.com/cinnData/DATA/master/Data/king.csv")
 
 # Linear regression model (original scale) #
 fm1 <- price ~ bedrooms + bathrooms + sqft_living + sqft_lot + floors +
@@ -25,11 +24,11 @@ error2 <- king$price - pred2
 summary(error1)
 summary(error2)
 par(mfrow=c(1,2))
-hist(king$price, main="Figure 1a. Prediction error (1)", xlab="")
-hist(pred_error, main="Figure 1b. Prediction error (2)", xlab="")
-plot(king$price ~ pred1, pch=20, main="Figure 2a. Actual vs predicted price (1)",
+hist(error1, main="Figure 1a. Prediction error (1)", xlab="")
+hist(error2, main="Figure 1b. Prediction error (2)", xlab="")
+plot(king$price ~ pred1, pch=".", main="Figure 2a. Actual vs predicted price (1)",
  xlab="Predicted price", ylab="Actual price")
-plot(king$price ~ pred2, pch=20, main="Figure 2b. Actual vs predicted price (2)",
+plot(king$price ~ pred2, pch=".", main="Figure 2b. Actual vs predicted price (2)",
   xlab="Predicted price", ylab="Prediction error")
 
 # Trimming the data #
