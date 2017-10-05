@@ -6,7 +6,7 @@ str(churn)
 N <- nrow(churn)
 
 # Formula #
-fm = churn ~ aclength + intplan + dataplan + ommin + omcall +
+fm <- churn ~ aclength + intplan + dataplan + ommin + omcall +
   otmin + otcall + ngmin + ngcall + imin + icall + cuscall
 
 # Logistic regression #
