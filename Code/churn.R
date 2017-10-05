@@ -32,14 +32,14 @@ fp1
 
 # Histograms #
 par(mfrow=c(1,2))
-hist(pred1[churn$churn==1], breaks=20,
+hist(score[churn$churn==1], breaks=20,
   main="Figure 2a. Scores (churners)", xlab="Churn score")
-hist(pred1[churn$churn==0], breaks=20,
+hist(score[churn$churn==0], breaks=20,
   main="Figure 2b. Scores (non-churners)", xlab="Churn score")
 
 # Lower cutoff
 cut2 <- mean(churn$churn)
-conf2 <- table(pred1 > cut2, churn$churn == 1)
+conf2 <- table(score > cut2, churn$churn == 1)
 conf2
 tp2 <- conf2["TRUE", "TRUE"]/sum(conf2[,"TRUE"])
 tp2
