@@ -2,7 +2,7 @@
 
 #### Introduction
 
-This assignment is based on the example of the lecture **decision trees**. The objectives are: (a) to try some variations of the filters developed in the lecture, and (b) to explore a simple approach to the validation of a predictive model.
+This assignment is based on the example of the lecture **Decision trees**. The objectives are: (a) to try some variations of the filters developed in the lecture, and (b) to explore a simple approach to the validation of a predictive model.
 
 #### Tasks
 
