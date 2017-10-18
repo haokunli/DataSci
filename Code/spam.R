@@ -1,11 +1,9 @@
 ## The spam filter ##
 
-# Setting work directory #
-setwd("/Users/miguel/Dropbox/DATA-2017-2/[DATA-05] Decision trees")
-
-# Loading data #
+# Reading data (customize) #
 spam <- read.csv(file="spam.csv")
-str(spam)
+str(spam[1:5])
+str(spam[48:52])
 
 # Formula #
 fm <- spam ~ .
@@ -26,7 +24,7 @@ text(tree1, font=1, cex=0.6)
 # Confusion matrix (1) #
 cut <- 0.5
 score1 <- predict(tree1, newdata=spam)
-conf1 <- table(score1 > cut, spam$spam==1)
+conf1 <- table(score1 > cut, spam$spam == 1)
 conf1
 tp1 <- conf1["TRUE", "TRUE"]/sum(conf1[,"TRUE"])
 tp1
