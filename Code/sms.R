@@ -1,10 +1,12 @@
 ## SMS in Singapore Mobile ##
 
-# Setting the working directopry (customize) #
-setwd("/Users/miguel/Dropbox/Current jobs/DATA-2017-1/DATA-05")
+# Setting the working directory (customize) #
+setwd("/Users/miguel/Dropbox/DATA-2017-2/[DATA-06] Text mining")
+setwd("C:/Users/mcanela/Dropbox (Personal)/DATA-2017-2/[DATA-06] Text mining")
 
 # Loading messages #
 message <- readLines("message.txt")
+str(message)
 N <- length(message)
 
 # Loading spam tags #
@@ -18,11 +20,11 @@ message[1:5]
 library(stringr)
 message <- str_to_lower(message)
 
-# Cleaning #
+# Cleaning and substitions #
 message <- str_replace_all(string=message, pattern = "'", replacement = "")
 message <- str_replace_all(message, "[.]{2,3}", " dots ")
 message <- str_replace_all(message, "[£$]", " pound ")
-message <- str_replace_all(message, ":)", " smiley ")
+message <- str_replace_all(message, ":[)]", " smiley ")
 message <- str_replace_all(message, "t[s ]?& ?cs?", " tconditions ")
 message <- str_replace_all(message, "&lt;(#|decimal|time)&gt", " ")
 message <- str_replace_all(message, "&amp;", " ")
@@ -42,7 +44,6 @@ term.list[1:5]
 # Remove stopwords #
 stopwords <- readLines("stopwords.txt")
 str(stopwords)
-"ur" %in% stopwords
 stopwords <- c(stopwords, "arent", "aint", "cant", "couldnt", "didnt",
   "doesnt", "dont", "im", "ive", "pls", "ü", "ur")
 stopRemove <- function(x) x[!(x %in% stopwords)]
@@ -90,7 +91,7 @@ fp1
 
 # Decision tree model #
 library(rpart)
-mod2 <- rpart(formula=fm, data=sms.TD[train,], cp=0.001) 
+mod2 <- rpart(formula=fm, data=sms.TD[train,], cp=0.001)
 pred2 <- predict(mod2, newdata=sms.TD[-train,])
 conf2 <- table(pred2 > cut, sms.TD[-train,]$spam==1)
 tp2 <- conf2["TRUE", "TRUE"]/sum(conf2[,"TRUE"])
