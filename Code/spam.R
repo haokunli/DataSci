@@ -8,9 +8,6 @@ str(spam[48:52])
 # Formula #
 fm <- spam ~ .
 
-# Setting the cutoff #
-cut <- 0.5
-
 # Decision tree #
 library(rpart)
 tree1 <- rpart(formula=fm, data=spam)
