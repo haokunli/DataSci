@@ -11,7 +11,7 @@ Broadly speaking, the **validation** of a model consists in checking that the mo
 1. Develop a spam filter based on a logistic regression equation and compare your model with the model presented in the example.
 
 2. Validate the models obtained for this example using a 50-50 split. In `R`, a random selection of one half of the rows of a data set `df` with `N` rows can be done with
-`train <- sample(1:N, size=N/2, replace=T)`
+`train <- sample(1:N, size=N/2, replace=F)`
 Then, the training set would be `df[train, ]` and the test set `df[-train, ]`.
 
 3. Drop the three `cap_` variables and binarize all the `word_` variables, transforming them into dummies for the occurrence of the corresponding word. Develop a spam filter using this binarized data set and compare your results with those presented in the example.
