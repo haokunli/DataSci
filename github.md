@@ -32,7 +32,7 @@ You can also embed plots, for example:
 plot(rnorm(25), type="l")
 ```
 
-![](github_files/figure-markdown_github/unnamed-chunk-1-1.png)
+![](https://media.wired.com/photos/59a754dd985f076069207b11/1:1/w_163,c_limit/xyzprinting-FA.jpg)
 
 ![](github_files/figure-markdown_github/pressure-1.png)
 
