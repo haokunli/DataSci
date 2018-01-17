@@ -1,15 +1,15 @@
 ## Data Science Course
 
-#### [:link:](https://s3.eu-west-2.amazonaws.com/cinndata/data/Introduction_to_R.html?versionId=null) Introduction to R
+#### Introduction to R
 
-#### [:link:](https://s3.eu-west-2.amazonaws.com/cinndata/data/Data_Science_with_R.html) Data science with R
+#### Data science with R
 
-#### [:link:](https://s3.eu-west-2.amazonaws.com/cinndata/data/Linear_Regression.html) Linear regression
+#### Linear regression
 
-#### [:link:](https://s3.eu-west-2.amazonaws.com/cinndata/data/Logistic_Regression.html) Logistic regression
+#### Logistic regression
 
-#### [:link:](https://s3.eu-west-2.amazonaws.com/cinndata/data/Decision_trees.html) Decision trees
+#### Decision trees
 
-#### [:link:](https://s3.eu-west-2.amazonaws.com/cinndata/data/Text_mining.html) Text mining
+#### Text mining
 
-#### [:link:](https://s3.eu-west-2.amazonaws.com/cinndata/data/Sentiment_analysis.html) Sentiment analysis with Twitter data
+#### Sentiment analysis with Twitter data
