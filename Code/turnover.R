@@ -1,10 +1,10 @@
 ## Data science with R ##
 
+# Finding working directory #
+getwd()
+
 # Setting working directory #
-url1 <- "/Users/miguel/Dropbox (Personal)/DATA-2017-2"
-url2 <- "/[DATA-02] Data science with R/"
-url <- paste(url1, url2, sep="")
-setwd(url)
+setwd("E:")
 
 # Opening file (1) #
 turnover <- read.csv(file="turnover.csv")
