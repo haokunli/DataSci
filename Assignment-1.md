@@ -6,9 +6,9 @@ This assignment is based on the homework of the lecture **Data science with R**.
 
 #### Tasks
 
-1. Produce a statistical summary for the adjusted closing prices.
+1. Produce a statistical summary for the adjusted close prices.
 
-2. Calculate the daily returns and the logarithmic returns for the adjusted closing prices and compare them.
+2. Calculate the daily returns and the logarithmic returns for the adjusted close prices and compare them.
 
 3. Plot a histogram of the returns. Can a normal distribution be used as a model here?
 
