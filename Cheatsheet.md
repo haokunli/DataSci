@@ -30,4 +30,4 @@
 
 - `hist`
 
-- `plot`. One or two variables. The default is `type="p"`, which uses dots.`type="l"` gives a line plot
+- `plot`
