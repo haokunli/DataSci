@@ -4,7 +4,7 @@
 getwd()
 
 # Setting working directory #
-setwd("E:")
+setwd("E:/")
 
 # Opening file (1) #
 turnover <- read.csv(file="turnover.csv")
