@@ -6,13 +6,13 @@
 
 #### Exploring a data frame
 
-- `head` and `tail`. Fist and last frows of a data frame. Default is 6.
+- `head` and `tail`. Fist and last rows of a data frame. Default is 6.
 
 - `str`. Structure of an object. Applied to a data frame, it tells the type of data for each column.
 
 - `dim`, `nrow` and `ncol`. Number of rows and/or columns of a data frame.
 
-- `summary`. Output differs depending on the type object to which it is applied. Applied to a data frame gives summary stats for the non-character columns of the data frame.
+- `summary`. Output differs depending on the type object to which it is applied. Applied to a data frame, gives summary stats for the non-character columns of the data frame.
 
 #### Pivot tables
 
