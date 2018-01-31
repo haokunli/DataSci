@@ -39,3 +39,5 @@
 #### Linear regression
 
 - `lm`. It gives an `lm` object, which is a list containing various objects related to linear regression, such as the coefficients, the predicted values, the residuals, etc. There many ways of specifying a linear model. Probably the simplest approach is to use the two arguments: (a) `formula`, to specify the equation, as in `formula = y ~ x1 + x2` and (b) `data`, as in `data = df`.
+
+- `predict`. In general, this function can be applied to a variety of predictive models, giving *predicted values*. In the simple version, it uses two arguments: (a) `object`, to specify the name of the model, and (b) `newdata`, to specify the name of the data frame used for the predictions, which can be the same data frame on which the model was obtained, or a fresh one.
