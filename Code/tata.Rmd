@@ -1,0 +1,51 @@
+---
+title: "Discussion Assignment 1"
+author: "Miguel-Angel Canela, IESE Business School"
+date: "January 31, 2018"
+output:
+  html_document:
+    theme: flatly
+---
+
+## Opening file (customize)
+```{r}
+tata <- read.csv("F:/tata.csv", stringsAsFactors=F)
+str(tata)
+```
+## Cleaning null values
+```{r}
+sum(tata$Open=="null")
+tata <- tata[tata$Open != "null", ]
+str(tata)
+price <- as.numeric(tata$Adj.Close)
+N <- nrow(tata)
+```
+
+## Summarizing adjusted price
+```{r}
+summary(price)
+```
+
+## Calculate returns and log returns
+```{r}
+return <- 100 * (price[-1]/price[-N] - 1)
+logreturn <- 100 * (log(price[-1]) - log(price[-N]))
+return[1:25]
+logreturn[1:25]
+summary(return - logreturn)
+```
+
+## Histogram of the returns
+```{r}
+hist(return, xlab="Daily returns", main="")
+```
+
+## Normality
+```{r}
+mean(abs(return - mean(return)) < 2*sd(return))
+```
+
+## Line plot
+```{r}
+plot(return, type="l", xlab="", ylab="Daily returns")
+```
